@@ -45,6 +45,10 @@ yourFlywheel.setOnAutoCenterListener(new Flywheel.OnAutoCenterListener() {
     }
 });
 ```
+Compatibility
+=================
+Currently it's compatible with API Level 12+.  
+But in the near future (with the help of God) I will try to make it compatible with API Level 7+ (or even lower).
 
 License
 =================
