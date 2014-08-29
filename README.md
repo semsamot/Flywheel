@@ -2,7 +2,7 @@ Flywheel
 =================
 The missed Flywheel widget for Android!
 
-It is heavily customizable.
+It is highly customizable.
 
 Document will be updated soon (with the help of God)
 
@@ -19,9 +19,9 @@ dependencies {
 **2)** Add `Flywheel` widget anywhere you want in your xml as:
 
 ```xml
-<info.semsamot.flywheel
-  android:layout_width="WRAP_CONTENT"
-  android:layout_height="WRAP_CONTENT">
+<info.semsamot.flywheel.Flywheel
+  android:layout_width="200dp"
+  android:layout_height="200dp">
 ```
 
 **3)** To add your items:

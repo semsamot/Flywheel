@@ -69,11 +69,17 @@ public class Item
         {
             breakAt = start + paint.breakText(
                     this.text, start, this.text.length(), true, this.rect.width() - textPadding, null);
-            lastWord = this.text.lastIndexOf(" ", breakAt);
-            if (lastWord != -1 && lastWord > start) breakAt = lastWord;
+
+            // if breakAt is not at the end of text, put it at last word
+            if (breakAt != this.text.length())
+            {
+                lastWord = this.text.lastIndexOf(" ", breakAt);
+                if (lastWord != -1 && lastWord > start) breakAt = lastWord;
+            }
+
             String slice = this.text.substring(start, breakAt);
 
-            // if next line is out of cell region then truncate this line and finish.
+            // if next line is out of rect bottom then truncate this line and finish.
             if ( (this.textChunks.size()+2) * lineSpacing > this.rect.height() + textPadding )
             {
                 mustTruncate = true;
