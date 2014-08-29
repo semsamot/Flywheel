@@ -4,6 +4,8 @@ The missed Flywheel widget for Android!
 
 It is highly customizable.
 
+![Flywheel demo running on Android 4.4](art/flywheel-demo.png)
+
 Document will be updated soon (with the help of God)
 
 Usage
