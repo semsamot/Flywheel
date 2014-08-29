@@ -195,9 +195,6 @@ public class Flywheel extends View {
         else
             scroller = new Scroller(appContext, null);
 
-        // FIXME compatibility issue
-        if (Build.VERSION.SDK_INT < 11) return;
-
         scrollAnimator = ValueAnimator.ofFloat(0, 1);
         scrollAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
@@ -549,8 +546,6 @@ public class Flywheel extends View {
             targetScrollPos = itemAtCenter.rect.centerX() - (containerWidth / 2);
         }
 
-        // FIXME compatibility issue
-        if (Build.VERSION.SDK_INT < 11) return;
         objectAnimator = ObjectAnimator.ofInt(this, "scrollPos", scrollPos, targetScrollPos);
         objectAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             @Override
